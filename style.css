@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-size: 0;
+}
+body{
+    background-color: #212529;
+}
+h1{
+    font-size: 36px;
+    margin:auto;
+    color: #F20F4B;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container{
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2.5%;
+}
+
+.sortingAlgos button{
+    width: 19.5%;
+    font-size: 15px;
+    border: 0;
+    margin-left:0.5%;
+    text-align: center;
+    padding: 5% 2%;
+    font-weight:bold;
+    border: 2px solid #212529;
+    border-radius: 2px;
+    text-decoration: none;
+    background-color: transparent;
+}
+button.arrayGenerate{
+    font-size: 14px;
+    background-color: #212529;
+}
+input[type="range"]{
+    font-size: 14px;
+}
+
+.sortingAlgos button:hover{
+    background-color:#A913A6;
+    color: white;
+    border-radius: 15px;
+    transition: color,background-color 0.5s linear;
+}    
+.sortingAlgos button:focus{
+    color: #f20f4b;
+    border-radius: 15px;
+    border: 2px solid #F20F4B;
+    transition: color 0.2s linear;
+}
