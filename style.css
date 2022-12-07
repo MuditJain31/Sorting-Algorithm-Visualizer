@@ -73,10 +73,10 @@ div.showArea{
     font-size: large;
 }
 
-.showArea div{
-    width: 1%;
-}
-
 .showArea{
     display: flex;
+    justify-content: center;
 }
+.showArea div{
+    max-width: 1%;
+}    

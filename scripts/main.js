@@ -1,5 +1,3 @@
-
-
 function createArray(divs,length){
     console.log('inside create array');
     let cont = document.querySelector('div.showArea');
