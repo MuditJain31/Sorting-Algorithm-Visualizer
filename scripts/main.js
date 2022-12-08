@@ -1,3 +1,11 @@
+import {bubbleSort} from "./BubbleSort.js";
+
+export function waitforme(milisec) { 
+    return new Promise(resolve => { 
+        setTimeout(() => { resolve('') }, milisec); 
+    }) 
+}
+
 function createArray(divs,length){
     console.log('inside create array');
     let cont = document.querySelector('div.showArea');
@@ -17,18 +25,35 @@ function createArray(divs,length){
     console.log(divs,length);
 }
 
+function executeAlgo(button,divs,lengths){
+    switch(button.innerText){
+        case "Bubble Sort":console.log("invoked successfully");
+                            bubbleSort(divs,lengths);
+        case "Bubble Sort":
+        case "Bubble Sort":
+        case "Bubble Sort":
+        case "Bubble Sort":
+        case "Bubble Sort":break;
+    }
+}
+
 function main(){
+    
+    let divs=new Array();
+    let lengths=new Array();
+
+    createArray(divs,lengths);
+
     const buttons = document.querySelectorAll('div.sortingAlgos button');
     console.log(buttons);
-    let divs=new Array();
-    let length=new Array();
     buttons.forEach(element => {
         element.addEventListener('click',()=>{
             console.log("inside event listener");
-            createArray(divs,length);
+            executeAlgo(element,divs,lengths);
         })
     });
-    console.log(divs,length);
 
 }
 main();
+
+
