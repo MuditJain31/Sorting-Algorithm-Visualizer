@@ -14,6 +14,12 @@ export async function bubbleSort(divs,lengths){
                 swapDiv(j,j-1,divs);
                 divs[j].style.backgroundColor='red';
                 divs[j-1].style.backgroundColor='red';
+            }else{
+                divs[j].style.backgroundColor='blue';
+                divs[j-1].style.backgroundColor='blue';
+                await waitforme(100);
+                divs[j].style.backgroundColor='red';
+                divs[j-1].style.backgroundColor='red';
             }
         }
         divs[lengths.length-i].style.backgroundColor="green";
