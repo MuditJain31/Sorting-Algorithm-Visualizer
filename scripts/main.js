@@ -1,5 +1,5 @@
 import {bubbleSort} from "./BubbleSort.js";
-
+import { selectionSort } from "./SelectionSort.js";
 export function waitforme(milisec) { 
     return new Promise(resolve => { 
         setTimeout(() => { resolve('') }, milisec); 
@@ -29,7 +29,10 @@ function executeAlgo(button,divs,lengths){
     switch(button.innerText){
         case "Bubble Sort":console.log("invoked successfully");
                             bubbleSort(divs,lengths);
-        case "Bubble Sort":
+                            break;
+        case "Selection Sort":console.log("invoked successfully");
+        selectionSort(divs,lengths);
+        break;
         case "Bubble Sort":
         case "Bubble Sort":
         case "Bubble Sort":
