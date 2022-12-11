@@ -13,7 +13,7 @@ body{
 }
 h1{
     margin-top:20px;
-    font-size: 36px;
+    font-size: 38px;
     color: #F20F4B;
     text-align: center;
     margin-bottom: 20px;
@@ -24,6 +24,7 @@ h1{
     justify-content: space-between;
     margin: 0 2.5%;
     font-size: 0;
+    height: 91px;
 }
 
 .sortingAlgos button{
@@ -33,24 +34,29 @@ h1{
     text-align: center;
     padding: 5% 2%;
     font-weight:bold;
-    border: 2px solid #39ff14;
+    border: 2px solid #5B84B1FF;
     border-radius: 5px;
     background-color: transparent;
-    color:#39ff14;
-
+    color:#5B84B1FF;
+    
 }
 button.arrayGenerate{
     font-size: 14px;
-    background-color: #212529;
+    background-color: #0a0c0d;
 }
 input[type="range"]{
     font-size: 14px;
 }
 
 .sortingAlgos button:hover{
-
-    background-color:#39ff14;
-    color: white;
+    color:#FC766AFF;
+    background-color: #5B84B1FF;
+    border-radius: 15px;
+    transition: color,background-color 0.3s linear;
+}
+.generateNewArray:hover{
+    background-color:#FC766AFF;
+    color: #5B84B1FF;
     border-radius: 15px;
     transition: color,background-color 0.3s linear;
 }    
@@ -65,7 +71,7 @@ input[type="range"]{
 div.showArea{
     margin: auto;
     margin-top: 30px;
-    border: #39ff14;
+    border: #b516ff;
     background-color: transparent;
     width: 80%;
     height: 70%;
@@ -78,11 +84,28 @@ div.showArea{
     justify-content: center;
 }
 .showArea div{
-    max-width: 1%;
+    max-width: 1.4%;
+    transition: height 0.2s linear;
+    transition: background-color 0.3s linear;
 }    
 marquee{
     color:black;
     font-size: 16px;
     font-weight: bolder;
     background-color: whitesmoke;
+}
+
+.generateNewArray{
+    text-align: center;
+    padding: 0% 2%;
+    font-weight:bold;
+    border: 2px solid #FC766AFF;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #FC766AFF;
+    margin-right:1%;
+    font-size: 15px;
+    width: 12%;
+    /* 
+    */
 }

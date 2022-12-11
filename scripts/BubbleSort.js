@@ -7,17 +7,20 @@ export async function bubbleSort(divs,lengths){
         for(let j=1;j<=lengths.length-i;j++){
             
             if(lengths[j]<lengths[j-1]){
-                divs[j].style.backgroundColor='blue';
+                divs[j].style.backgroundColor='cyan';
                 divs[j-1].style.backgroundColor='blue';
-                await waitforme(100);
+                await waitforme(1000);
                 swap(j-1,j,lengths);
                 swapDiv(j,j-1,divs);
+                divs[j-1].style.backgroundColor='cyan';
+                divs[j].style.backgroundColor='blue';
+                await waitforme(1000);
                 divs[j].style.backgroundColor='red';
                 divs[j-1].style.backgroundColor='red';
             }else{
-                divs[j].style.backgroundColor='blue';
+                divs[j].style.backgroundColor='cyan';
                 divs[j-1].style.backgroundColor='blue';
-                await waitforme(100);
+                await waitforme(1000);
                 divs[j].style.backgroundColor='red';
                 divs[j-1].style.backgroundColor='red';
             }

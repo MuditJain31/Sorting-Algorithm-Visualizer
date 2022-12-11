@@ -1,5 +1,6 @@
 import {bubbleSort} from "./BubbleSort.js";
 import { selectionSort } from "./SelectionSort.js";
+// import {insertionSort} from "./InsertionSort.js";
 export function waitforme(milisec) { 
     return new Promise(resolve => { 
         setTimeout(() => { resolve('') }, milisec); 
@@ -9,6 +10,7 @@ export function waitforme(milisec) {
 function createArray(divs,length){
     console.log('inside create array');
     let cont = document.querySelector('div.showArea');
+    cont.innerHTML = '';
     let size = document.getElementById('arraySize').value;
     console.log(size);
     for(let i=0;i<size;i++){
@@ -22,7 +24,7 @@ function createArray(divs,length){
         divs.push(elem);
         cont.appendChild(elem);
     }
-    console.log(divs,length);
+    console.log(divs.length);
 }
 
 function executeAlgo(button,divs,lengths){
@@ -33,7 +35,9 @@ function executeAlgo(button,divs,lengths){
         case "Selection Sort":console.log("invoked successfully");
         selectionSort(divs,lengths);
         break;
-        case "Bubble Sort":
+        case "Insertion Sort":console.log("invoked successfully");
+        insertionSort(divs,lengths);
+        break;
         case "Bubble Sort":
         case "Bubble Sort":
         case "Bubble Sort":break;
@@ -46,6 +50,12 @@ function main(){
     let lengths=new Array();
 
     createArray(divs,lengths);
+
+    document.querySelector('button.generateNewArray').addEventListener('click',()=>{
+        divs.length=0;
+        lengths.length=0;
+        createArray(divs,lengths);
+    })
 
     const buttons = document.querySelectorAll('div.sortingAlgos button');
     console.log(buttons);

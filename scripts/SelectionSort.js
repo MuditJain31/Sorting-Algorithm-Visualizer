@@ -6,20 +6,24 @@ export async function selectionSort(divs, lengths) {
         for (let j = i + 1; j < lengths.length; j++) {
             divs[i].style.backgroundColor = 'blue';
             divs[j].style.backgroundColor = 'cyan';
-            await waitforme(100);
+            await waitforme(1000);
             if (lengths[j] < lengths[smallerLen]) {
                 smallerLen = j;
                 divs[smallerDiv].style.backgroundColor = 'red';
                 smallerDiv = j;
-                divs[smallerDiv].style.backgroundColor = 'cyan';
+                divs[smallerDiv].style.backgroundColor = 'yellow';
             } else {
                 divs[j].style.backgroundColor = 'red';
             }
         }
         swapLen(i, smallerLen, lengths);
         swapDiv(i, smallerLen, divs);
+        divs[i].style.backgroundColor = 'yellow';
+        divs[smallerLen].style.backgroundColor = 'blue';
+        await waitforme(1000);
         divs[smallerLen].style.backgroundColor = 'red';
         divs[i].style.backgroundColor = 'green';
+        await waitforme(1000);
     }
     divs[lengths.length - 1].style.backgroundColor = 'green';
 }
