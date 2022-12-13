@@ -48,23 +48,17 @@ input[type="range"]{
     font-size: 14px;
 }
 
-.sortingAlgos button:hover{
-    color:#FC766AFF;
-    background-color: #5B84B1FF;
-    border-radius: 15px;
-    transition: color,background-color 0.3s linear;
-}
-.generateNewArray:hover{
+.hover:hover{
     background-color:#FC766AFF;
     color: #5B84B1FF;
     border-radius: 15px;
     transition: color,background-color 0.3s linear;
 }    
 .sortingAlgos button:focus{
-    color: #1f51ff;
-    background-color: #212529;
+    background-color: transparent;
+    color: aquamarine;
     border-radius: 15px;
-    border: 2px solid #1f51ff;
+    border: 2px solid aqua;
     transition: color 0.2s linear;
 }
 
@@ -82,11 +76,12 @@ div.showArea{
 .showArea{
     display: flex;
     justify-content: center;
+    /* align-items: flex-end; */
 }
 .showArea div{
     max-width: 1.4%;
     transition: height 0.2s linear;
-    transition: background-color 0.3s linear;
+    transition: background-color 0.2s linear;
 }    
 marquee{
     color:black;
@@ -108,4 +103,15 @@ marquee{
     width: 12%;
     /* 
     */
+}
+
+.disabled{
+
+}
+
+button.clicked{
+    background-color: transparent;
+    color: aquamarine;
+    border-radius: 15px;
+    border: 2px solid aqua;
 }

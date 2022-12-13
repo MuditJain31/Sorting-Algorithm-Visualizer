@@ -1,4 +1,10 @@
 import { waitforme } from "./main.js";
+let delay=document.querySelector('#speed').value;
+delay = 1500-delay;
+document.querySelector('#speed').addEventListener('input',()=>{
+    delay = document.querySelector('#speed').value;
+    delay=1500-delay;
+})
 export async function bubbleSort(divs,lengths){
     console.log("heeeeeeeeeeyyyyyyyyyyyyyyyyyyy");
     console.log(divs,lengths);
@@ -9,18 +15,18 @@ export async function bubbleSort(divs,lengths){
             if(lengths[j]<lengths[j-1]){
                 divs[j].style.backgroundColor='cyan';
                 divs[j-1].style.backgroundColor='blue';
-                await waitforme(1000);
+                await waitforme(delay);
                 swap(j-1,j,lengths);
                 swapDiv(j,j-1,divs);
                 divs[j-1].style.backgroundColor='cyan';
                 divs[j].style.backgroundColor='blue';
-                await waitforme(1000);
+                await waitforme(delay);
                 divs[j].style.backgroundColor='red';
                 divs[j-1].style.backgroundColor='red';
             }else{
                 divs[j].style.backgroundColor='cyan';
                 divs[j-1].style.backgroundColor='blue';
-                await waitforme(1000);
+                await waitforme(delay);
                 divs[j].style.backgroundColor='red';
                 divs[j-1].style.backgroundColor='red';
             }

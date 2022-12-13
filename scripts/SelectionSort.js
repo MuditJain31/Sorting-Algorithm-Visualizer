@@ -1,4 +1,10 @@
 import { waitforme } from "./main.js";
+let delay=document.querySelector('#speed').value;
+delay = 1500-delay;
+document.querySelector('#speed').addEventListener('input',()=>{
+    delay = document.querySelector('#speed').value;
+    delay=1500-delay;
+})
 export async function selectionSort(divs, lengths) {
     for (let i = 0; i < lengths.length - 1; i++) {
         let smallerLen = i;
@@ -6,7 +12,7 @@ export async function selectionSort(divs, lengths) {
         for (let j = i + 1; j < lengths.length; j++) {
             divs[i].style.backgroundColor = 'blue';
             divs[j].style.backgroundColor = 'cyan';
-            await waitforme(1000);
+            await waitforme(delay);
             if (lengths[j] < lengths[smallerLen]) {
                 smallerLen = j;
                 divs[smallerDiv].style.backgroundColor = 'red';
@@ -20,10 +26,10 @@ export async function selectionSort(divs, lengths) {
         swapDiv(i, smallerLen, divs);
         divs[i].style.backgroundColor = 'yellow';
         divs[smallerLen].style.backgroundColor = 'blue';
-        await waitforme(1000);
+        await waitforme(delay);
         divs[smallerLen].style.backgroundColor = 'red';
         divs[i].style.backgroundColor = 'green';
-        await waitforme(1000);
+        await waitforme(delay);
     }
     divs[lengths.length - 1].style.backgroundColor = 'green';
 }
