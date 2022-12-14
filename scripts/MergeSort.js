@@ -60,6 +60,13 @@ async function sortArray(divs,lengths,l,mid,r){
             divs[start].style.height = `${tempLengths[temp]/divs.length * 95}%`;
             divs[start].style.backgroundColor='green';
         }
+    }else if(mid>divs.length/2){
+        for(let start=l,temp=0; start<=r;temp++,start++){
+            lengths[start] = tempLengths[temp];
+            await waitforme(delay/5);
+            divs[start].style.height = `${tempLengths[temp]/divs.length * 95}%`;
+            divs[start].style.backgroundColor='yellow';
+        }
     }else{
         for(let start=l,temp=0; start<=r;temp++,start++){
             lengths[start] = tempLengths[temp];
