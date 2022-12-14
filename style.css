@@ -12,11 +12,15 @@ body{
     height: 100vh;
 }
 h1{
+    margin: auto;
+    width: 50%;
+    max-width: 75%;
     margin-top:20px;
     font-size: 38px;
     color: #F20F4B;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #F20F4B;
 }
 .container{
     font-size: 14px;
@@ -118,4 +122,30 @@ button.clicked{
     color: aquamarine;
     border-radius: 15px;
     border: 2px solid aqua;
+}
+
+label{
+    display: block;
+    font-size: 16px;
+    color:white;
+    height: 47.5%;
+}
+
+.slidecontainer{
+    padding: 0;
+    width:15%;
+}
+
+.slidecontainer label:first-child{
+    margin-bottom: 2.5%;
+}
+
+.slidecontainer label:nth-child(2){
+    margin-top: 2.5%;
+}
+
+
+input[type="range"]{
+    display: block;
+    width: 100%;
 }
