@@ -34,10 +34,10 @@ h1{
     text-align: center;
     padding: 5% 2%;
     font-weight:bold;
-    border: 2px solid #5B84B1FF;
+    border: 2px solid #FC766AFF;
     border-radius: 5px;
     background-color: transparent;
-    color:#5B84B1FF;
+    color:#FC766AFF;
     
 }
 button.arrayGenerate{
@@ -54,6 +54,7 @@ input[type="range"]{
     border-radius: 15px;
     transition: color,background-color 0.3s linear;
 }    
+
 .sortingAlgos button:focus{
     background-color: transparent;
     color: aquamarine;
@@ -105,9 +106,12 @@ marquee{
     */
 }
 
-.disabled{
 
+button.disabled{
+    color:#5B84B1FF;
+    border: 2px solid #5B84B1FF;
 }
+
 
 button.clicked{
     background-color: transparent;

@@ -1,10 +1,10 @@
 //color implemetation remaining
 import { waitforme } from "./main.js";
 let delay=document.querySelector('#speed').value;
-delay = 1500-delay;
+delay = 1200-delay;
 document.querySelector('#speed').addEventListener('input',()=>{
     delay = document.querySelector('#speed').value;
-    delay=1500-delay;
+    delay=1200-delay;
 })
 export async function insertionSort(divs,lengths){
     divs[0].style.backgroundColor = 'green';

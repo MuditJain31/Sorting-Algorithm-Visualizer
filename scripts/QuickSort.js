@@ -1,9 +1,9 @@
 import { waitforme } from "./main.js";
 let delay=document.querySelector('#speed').value;
-delay = 1500-delay;
+delay = 1200-delay;
 document.querySelector('#speed').addEventListener('input',()=>{
     delay = document.querySelector('#speed').value;
-    delay=1500-delay;
+    delay=1200-delay;
 })
 
 export async function quickSort(divs,lengths){
@@ -12,10 +12,9 @@ export async function quickSort(divs,lengths){
     console.log(lengths,divs);
 }
 
-async function colorGreen(i,j,divs){
+async function colorRed(i,j,divs){
     for(let k=i;k<j;k++){
-        divs[k].style.backgroundColor='green';
-        await waitforme(100);
+        divs[k].style.backgroundColor='red';
     }
 }
 
@@ -23,16 +22,14 @@ async function sorting(divs , lengths, i,j){
     if(i>j){
         return;
     }
-    await waitforme(100);
+    await waitforme(delay);
     divs[j].style.backgroundColor = 'orange';
     let idx = await partition(divs,lengths,lengths[j],i,j);
     divs[idx].style.backgroundColor = 'green';
-    await waitforme(100);
+    await waitforme(delay);
+    colorRed(idx+1,j+1,divs);
     let leftIdx = await sorting(divs,lengths,i,idx-1);
-    // await colorGreen(leftIdx+1,idx-1,divs);
     let rightIdx = await sorting(divs,lengths,idx+1,j);
-    // await colorGreen(idx+1,rightIdx-1,divs);
-    // phir yaha color hogaa idx+1 to j
     return idx;
 }
 
@@ -42,13 +39,13 @@ async function partition(divs,lengths,pivot,l,r){
     while(i<=r){
         divs[j].style.backgroundColor='cyan';
         divs[i].style.backgroundColor='blue';
-        await waitforme(100);
+        await waitforme(delay);
         if(lengths[i]<=pivot){
             if(i!=j){
                 swap(divs,lengths,i,j);
                 divs[i].style.backgroundColor='cyan';
                 divs[j].style.backgroundColor='blue';
-                await waitforme(100);
+                await waitforme(delay);
             }
             divs[i].style.backgroundColor='grey';
             divs[j].style.backgroundColor='red';

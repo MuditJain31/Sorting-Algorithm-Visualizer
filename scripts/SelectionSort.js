@@ -1,9 +1,9 @@
 import { waitforme } from "./main.js";
 let delay=document.querySelector('#speed').value;
-delay = 1500-delay;
+delay = 1200-delay;
 document.querySelector('#speed').addEventListener('input',()=>{
     delay = document.querySelector('#speed').value;
-    delay=1500-delay;
+    delay=1200-delay;
 })
 export async function selectionSort(divs, lengths) {
     for (let i = 0; i < lengths.length - 1; i++) {

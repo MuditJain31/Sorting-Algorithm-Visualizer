@@ -19,6 +19,7 @@ function disableButtons(){
     buttons.forEach(elem=>{
         elem.classList.remove('hover');
         elem.disabled=true;
+        elem.classList.add('disabled');
     });
 
     range.disabled=true;
